@@ -1,0 +1,5 @@
+1 Moneda = Espacio
+5 Monedas = Enter
+10 Monedas = Delete
+20 Monedas = Borrar la mitad de la mitad de la linea de codigo
+30 Monedas = Borrar toda una linea de codigo
