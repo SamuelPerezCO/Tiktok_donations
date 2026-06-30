@@ -1,15 +1,18 @@
-from TikTokLive import TikTokLiveClient
-from TikTokLive.events import GiftEvent , CommentsEvent
-import pyautogui
+from TikTokLive.events import GiftEvent
 
-client = TikTokLiveClient(unique_id="@unaneaprogramadora")
+one_coin = ["Rose" , "GG" , "Ice Cream Cone" , "White Rose" , "You're awesome" ,
+            "Clap Clap" , "TikTok" , "Guardian Wings" , "Community Heart" , "Love you so much" ,
+            "Freestyle" , "A Shard of Hope" , "Glow Stick" , "It's corn" , "Pop" , "Good Job" ,
+            "Wink wink" , "Cake Slice" , "Maracas" , "Oldies" , "It's Match Time"]
 
-@client.on(GiftEvent)
 async def on_gift(event: GiftEvent):
-    print(f"{event.user.uniqueId} sent a {event.gift.name} x{event.gift.repeatCount}")
-    
+    print(f"{event.user.unique_id} sent a {event.gift.name}")
+
+    for i in one_coin:
+        if i == event.gift.name:
+            print(f"The gift is {event.gift.name} and it worked")
+"""
     if event.gift.name == "Rose":
         pyautogui.press('space')
         print ("Space key pressed due to Rose gift!")
-
-client.run()
+"""
