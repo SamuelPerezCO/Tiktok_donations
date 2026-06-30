@@ -1,15 +1,10 @@
 from TikTokLive import TikTokLiveClient
-from TikTokLive.events import GiftEvent , CommentsEvent
-import pyautogui
+from TikTokLive.events import LikeEvent
 
-client = TikTokLiveClient(unique_id="@unaneaprogramadora")
+from handlers.likes import on_like
 
-@client.on(GiftEvent)
-async def on_gift(event: GiftEvent):
-    print(f"{event.user.uniqueId} sent a {event.gift.name} x{event.gift.repeatCount}")
-    
-    if event.gift.name == "Rose":
-        pyautogui.press('space')
-        print ("Space key pressed due to Rose gift!")
+client = TikTokLiveClient(unique_id="@backdoor_humor")
+
+client.on(LikeEvent)(on_like)
 
 client.run()
