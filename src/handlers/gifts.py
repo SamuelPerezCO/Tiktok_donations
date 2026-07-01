@@ -47,4 +47,8 @@ async def on_gift(event: GiftEvent):
     for a in ten_to_nineteen_coins:
         if a == event.gift.name:
             pyautogui.press("delete")
+
+    for o in twenty_to_twentynine_coins:
+        if o == event.gift.name:
+            pyautogui.write(event.gift.name)
     

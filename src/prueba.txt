@@ -1,5 +1,5 @@
 1 - 4 Monedas = Espacio
 5  - 9 Monedas = Enter
 10 - 19 Monedas = Delete
-20 - 29 Monedas = Borrar la mitad de la mitad de la linea de codigo
+20 - 29 Monedas = Agrega el nombre del regalo
 30 Monedas = Borrar toda una linea de codigo
