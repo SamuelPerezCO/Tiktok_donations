@@ -10,7 +10,7 @@ async def on_gift(event: GiftEvent):
     elif event.gift.name == "Finger Heart":
         pyautogui.press("enter")
 
-    elif event.gift.name == "Rosa":
+    elif event.gift.name == "Heart":
         pyautogui.press("delete")
 
     elif event.gift.name == "Capybara":
