@@ -19,6 +19,6 @@ async def on_gift(event: GiftEvent):
             break
 
     for e in five_to_nine_coins:
-        if i == event.gift.name:
+        if e == event.gift.name:
             pyautogui.press("enter")
     
